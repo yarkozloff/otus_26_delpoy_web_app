@@ -73,7 +73,7 @@ root@yarkozloff:/otus/deploy_app# tree
 - node.js (на порту 8082)
 - wordpress (на порту 8083)
 
-Основная работа Ansible будет заключаться в устновке Docker и копировании файловов проекта
+Основная работа Ansible будет заключаться в подготовке docker и копировании файлов проекта
 
 ## vagrant provisioning
 После предварительных испытаний разрушаем машину (vagrant halt) и поднимаем заново (vagrant up). Затем провиженим с записью в файл (vagrant provision > provision_log)
