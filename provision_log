@@ -1,0 +1,45 @@
+==> DynamicWeb: Running provisioner: ansible...
+    DynamicWeb: Running ansible-playbook...
+
+PLAY [Deploy web app] **********************************************************
+
+TASK [Install docker packages] *************************************************
+ok: [DynamicWeb] => (item=apt-transport-https)
+ok: [DynamicWeb] => (item=ca-certificates)
+ok: [DynamicWeb] => (item=curl)
+ok: [DynamicWeb] => (item=software-properties-common)
+
+TASK [Add Docker s official GPG key] *******************************************
+ok: [DynamicWeb]
+
+TASK [Verify that we have the key with the fingerprint] ************************
+ok: [DynamicWeb]
+
+TASK [Set up the stable repository] ********************************************
+ok: [DynamicWeb]
+
+TASK [Update apt packages] *****************************************************
+ok: [DynamicWeb]
+
+TASK [Install docker] **********************************************************
+ok: [DynamicWeb]
+
+TASK [Add remote "vagrant" user to "docker" group] *****************************
+ok: [DynamicWeb]
+[WARNING]: 'append' is set, but no 'groups' are specified. Use 'groups' for
+appending new groups.This will change to an error in Ansible 2.14.
+
+TASK [Install docker-compose] **************************************************
+ok: [DynamicWeb]
+
+TASK [Copy project] ************************************************************
+changed: [DynamicWeb]
+
+TASK [reset ssh connection] ****************************************************
+
+TASK [Run container] ***********************************************************
+changed: [DynamicWeb]
+
+PLAY RECAP *********************************************************************
+DynamicWeb                 : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
